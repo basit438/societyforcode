@@ -66,71 +66,55 @@ export default function About() {
 
   const content = {
     who: {
-      title: "A community bridging innovation and opportunity",
+      title: "Where creativity meets innovation",
       text: (
-        <div className="space-y-4">
-          <p>
-            <span className="font-bold bg-gradient-to-r from-purple-600 to-purple-800 bg-clip-text text-transparent">
-              Society For Code (SFC)
-            </span>{" "}
-            is a dynamic community of{" "}
-            <span className="font-semibold text-gray-900">
-              developers, creative UI/UX designers, and digital innovators
-            </span>{" "}
-            united by passion and expertise. As a{" "}
-            <span className="font-semibold text-gray-900">
-              full-service business agency,
-            </span>{" "}
-            we help brands unlock their digital potential through exceptional design and development.
+        <div className="space-y-6">
+          <p className="text-gray-700 leading-relaxed text-lg">
+            <span className="font-bold text-purple-600">Society for Code</span> is where digital dreams take shape.
+            We're a vibrant community of developers, designers, and innovators united by one passion:{" "}
+            <span className="font-semibold text-gray-900">crafting exceptional digital experiences</span>.
           </p>
-          <p className="text-gray-600">
-            Founded on collaboration, innovation, and excellence, we bring together
-            creative talent and technical expertise to deliver cutting-edge digital
-            solutions that make businesses stand out.
+          <p className="text-gray-600 leading-relaxed">
+            We operate at the intersection of creativity and innovation, ensuring every project achieves
+            its full potential through meticulous precision and smart technology choices.
           </p>
+
         </div>
       ),
     },
     what: {
-      title: "Empowering engineers, transforming businesses",
+      title: "Turning ideas into stunning realities ✨",
       text: (
-        <div className="space-y-4">
-          <p>
-            We are a{" "}
-            <span className="font-semibold text-gray-900">
-              community-powered business agency
-            </span>{" "}
-            where talented developers, designers, and creatives collaborate to deliver{" "}
-            <span className="font-semibold text-gray-900">
-              premium software development, AI-powered solutions, and stunning
-              design experiences
-            </span>{" "}
-            that drive real business results.
+        <div className="space-y-6">
+          <p className="text-gray-700 leading-relaxed text-lg">
+            Ever scroll through your feed and see something digitally stunning, wondering{" "}
+            <span className="font-semibold text-purple-600 italic">"how did they even do that?"</span>{" "}
+            That's the feeling we chase every single day.
           </p>
-          <p className="text-gray-600">
-            From web applications to AI integrations, mobile apps to brand
-            identities— we craft digital experiences that drive growth and leave
-            lasting impressions.
+          <p className="text-gray-600 leading-relaxed">
+            We're obsessed with turning digital ideas into realities that feel effortless,
+            look incredible, and deliver measurable results for your business.
           </p>
+
         </div>
       ),
     },
     mission: {
-      title: "Building the future of digital experiences",
+      title: "Building digital excellence, one project at a time",
       text: (
-        <div className="space-y-4">
-          <p>
+        <div className="space-y-6">
+          <p className="text-gray-700 leading-relaxed text-lg">
             Our mission is to{" "}
-            <span className="font-semibold text-gray-900">
+            <span className="font-bold bg-gradient-to-r from-purple-600 to-purple-800 bg-clip-text text-transparent">
               empower businesses through exceptional digital craftsmanship
             </span>
-            , combining creative excellence with technical innovation to create
-            solutions that inspire and perform.
+            —combining creative excellence with technical innovation.
           </p>
-          <p className="text-gray-600">
-            At Society for Code, we've built our foundation on the principle of 'Digital Excellence,' a commitment to merging creativity with innovation to deliver tangible results.
+          <p className="text-gray-600 leading-relaxed">
+            We've built our foundation on the principle of 'Digital Excellence,' a commitment to
+            merging creativity with innovation to deliver tangible, measurable results.
+          </p>
 
-          </p>
         </div>
       ),
     },
@@ -199,9 +183,9 @@ export default function About() {
         </motion.div>
 
         {/* Content + Stats */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10 md:gap-12 lg:gap-20 items-center font-inter">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10 md:gap-12 lg:gap-20 items-start font-inter">
           {/* Left Side (Animated Tab Content) */}
-          <div className="relative overflow-hidden min-h-[300px] sm:min-h-[350px]">
+          <div className="relative overflow-visible min-h-[450px] sm:min-h-[500px] md:min-h-[480px]">
             <AnimatePresence mode="wait">
               <motion.div
                 key={activeTab}
@@ -209,7 +193,7 @@ export default function About() {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -40 }}
                 transition={{ duration: 0.6, ease: "easeInOut" }}
-                className="absolute inset-0 space-y-6 sm:space-y-8 text-center lg:text-left"
+                className="absolute inset-0 space-y-5 sm:space-y-6 text-center lg:text-left"
               >
                 <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black text-gray-900 leading-tight tracking-tight">
                   {content[activeTab].title}
@@ -217,7 +201,7 @@ export default function About() {
                 <div className="text-sm sm:text-base lg:text-lg leading-relaxed">
                   {content[activeTab].text}
                 </div>
-                <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start pt-4">
+                <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start pt-2 sm:pt-4">
                   <button className="group px-6 sm:px-8 py-3 sm:py-3.5 bg-gradient-to-r from-purple-600 to-purple-700 text-white rounded-xl font-bold text-sm sm:text-base flex items-center justify-center gap-2 hover:shadow-xl hover:shadow-purple-400/40 transition-all duration-300 hover:scale-105">
                     Join Our Community
                     <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform" />

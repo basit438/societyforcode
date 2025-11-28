@@ -15,14 +15,17 @@ const geistMono = Geist_Mono({
 export const metadata = {
   title: "SfC",
   description: "Software Solutions for Modern Businesses",
+  icons: {
+    icon: '/sfclogo.jpg',
+  },
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased font-syne`}>
-                 {children}
-       
+        {children}
+
       </body>
     </html>
   );
