@@ -73,19 +73,20 @@ export default function About() {
             <span className="font-bold bg-gradient-to-r from-purple-600 to-purple-800 bg-clip-text text-transparent">
               Society For Code (SFC)
             </span>{" "}
-            is more than a student society—we're a thriving ecosystem where{" "}
+            is a dynamic community of{" "}
             <span className="font-semibold text-gray-900">
-              aspiring engineers transform into industry-ready developers
+              developers, creative UI/UX designers, and digital innovators
             </span>{" "}
-            and{" "}
+            united by passion and expertise. As a{" "}
             <span className="font-semibold text-gray-900">
-              businesses unlock their digital potential.
-            </span>
+              full-service business agency,
+            </span>{" "}
+            we help brands unlock their digital potential through exceptional design and development.
           </p>
           <p className="text-gray-600">
-            Founded on collaboration, innovation, and excellence, we create
-            meaningful connections between talented CSE students and businesses
-            seeking cutting-edge digital solutions.
+            Founded on collaboration, innovation, and excellence, we bring together
+            creative talent and technical expertise to deliver cutting-edge digital
+            solutions that make businesses stand out.
           </p>
         </div>
       ),
@@ -95,17 +96,16 @@ export default function About() {
       text: (
         <div className="space-y-4">
           <p>
-            We operate at the intersection of{" "}
+            We are a{" "}
             <span className="font-semibold text-gray-900">
-              education and innovation
-            </span>
-            , providing students with real-world project experience while
-            delivering{" "}
+              community-powered business agency
+            </span>{" "}
+            where talented developers, designers, and creatives collaborate to deliver{" "}
             <span className="font-semibold text-gray-900">
               premium software development, AI-powered solutions, and stunning
-              design services
+              design experiences
             </span>{" "}
-            to businesses.
+            that drive real business results.
           </p>
           <p className="text-gray-600">
             From web applications to AI integrations, mobile apps to brand
@@ -116,22 +116,22 @@ export default function About() {
       ),
     },
     mission: {
-      title: "Building tomorrow’s tech leaders, today",
+      title: "Building the future of digital experiences",
       text: (
         <div className="space-y-4">
           <p>
             Our mission is to{" "}
             <span className="font-semibold text-gray-900">
-              bridge the gap between academic learning and industry demands
+              empower businesses through exceptional digital craftsmanship
             </span>
-            , while helping businesses embrace digital transformation with
-            confidence.
+            , combining creative excellence with technical innovation to create
+            solutions that inspire and perform.
           </p>
           <p className="text-gray-600">
-            We believe in learning by doing—every project is an opportunity for
-            our members to grow, innovate, and deliver exceptional value.
-            Together, we’re shaping the future of technology, one line of code
-            at a time.
+            We believe in the power of collaboration—bringing together diverse
+            talents to solve complex challenges and deliver extraordinary value.
+            Together, we're shaping the future of technology and design, one
+            project at a time.
           </p>
         </div>
       ),
@@ -274,7 +274,7 @@ export default function About() {
               <div className="text-center pt-6">
                 <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-purple-600 to-purple-700 text-white rounded-full text-sm font-bold shadow-lg">
                   <Code2 className="w-4 h-4" />
-                  <span>Where Engineers Meet Opportunity</span>
+                  <span>Where Creativity Meets Innovation</span>
                 </div>
               </div>
             </div>

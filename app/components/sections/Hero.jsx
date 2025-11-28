@@ -173,7 +173,7 @@ function Hero() {
           {/* Floating Badge */}
           <div className="inline-flex items-center gap-2 px-5 py-2.5 bg-white shadow-lg shadow-purple-200/50 border border-purple-200 rounded-full mb-8 animate-bounce">
             <Sparkles className="w-4 h-4 text-purple-600" />
-            <span className="text-sm text-gray-700 font-semibold">Where Innovation Meets Education</span>
+            <span className="text-sm text-gray-700 font-semibold">Where Creativity Meets Innovation</span>
           </div>
 
           {/* Main Heading with Artistic Typography */}
@@ -192,7 +192,7 @@ function Hero() {
 
           {/* Subheading */}
           <p className="text-xl md:text-2xl text-gray-600 mb-12 max-w-2xl leading-relaxed font-medium">
-            Premium software development, AI-powered solutions, and stunning design services—empowering CSE students to innovate and excel.
+            A creative community and business agency delivering premium software development, AI-powered solutions, and stunning design that transforms brands.
           </p>
 
           {/* CTA Buttons */}
@@ -202,7 +202,7 @@ function Hero() {
               <ArrowRight className="w-5 h-5 group-hover:translate-x-2 transition-transform" />
             </button>
             <button className="px-9 py-4 bg-white text-purple-700 rounded-2xl font-bold text-lg border-2 border-purple-300 hover:border-purple-500 hover:bg-purple-50 transition-all duration-300 shadow-lg shadow-purple-100">
-              Join the Society
+              Join Our Community
             </button>
           </div>
 
@@ -220,7 +220,7 @@ function Hero() {
               <div className="absolute -inset-2 bg-gradient-to-r from-purple-400 to-purple-600 rounded-2xl blur opacity-0 group-hover:opacity-30 transition-opacity" />
               <div className="relative">
                 <div className="text-5xl font-black bg-gradient-to-r from-purple-600 to-purple-800 bg-clip-text text-transparent mb-2">200+</div>
-                <div className="text-sm text-gray-600 font-semibold uppercase tracking-wider">Members</div>
+                <div className="text-sm text-gray-600 font-semibold uppercase tracking-wider">Creatives</div>
               </div>
             </div>
             
