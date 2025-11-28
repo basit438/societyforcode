@@ -65,7 +65,7 @@ export default function CommunityDrivenShowcase() {
       <AnimatePresence mode="wait" custom={direction}>
         <motion.div
           key={index}
-          className={`absolute inset-0 flex flex-col items-center justify-center text-center px-8 sm:px-16 md:px-28 bg-gradient-to-b ${slides[index].gradient}`}
+          className={`absolute inset-0 flex flex-col items-center justify-center text-center px-4 sm:px-8 md:px-16 lg:px-28 bg-gradient-to-b ${slides[index].gradient}`}
           initial={{ opacity: 0, y: direction > 0 ? 100 : -100 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: direction > 0 ? -100 : 100 }}
@@ -73,21 +73,21 @@ export default function CommunityDrivenShowcase() {
         >
           {/* Artistic Orbs */}
           <div className="absolute inset-0 -z-10 overflow-hidden">
-            <div className={`absolute top-1/3 left-20 w-72 h-72 ${slides[index].orbColor} rounded-full blur-3xl`} />
-            <div className={`absolute bottom-1/3 right-20 w-96 h-96 ${slides[index].orbColor} rounded-full blur-3xl`} />
+            <div className={`absolute top-1/3 left-10 sm:left-20 w-48 sm:w-72 h-48 sm:h-72 ${slides[index].orbColor} rounded-full blur-3xl`} />
+            <div className={`absolute bottom-1/3 right-10 sm:right-20 w-64 sm:w-96 h-64 sm:h-96 ${slides[index].orbColor} rounded-full blur-3xl`} />
           </div>
 
           {/* Title & Subtitle */}
           <motion.h2
             key={`title-${index}`}
-            className="text-[9vw] sm:text-[5vw] font-extrabold bg-gradient-to-r from-purple-700 via-purple-500 to-purple-400 bg-clip-text text-transparent mb-4"
+            className="text-[12vw] sm:text-[8vw] md:text-[6vw] lg:text-[5vw] font-extrabold bg-gradient-to-r from-purple-700 via-purple-500 to-purple-400 bg-clip-text text-transparent mb-3 sm:mb-4"
           >
             {slides[index].title}
           </motion.h2>
 
           <motion.h3
             key={`subtitle-${index}`}
-            className="text-lg sm:text-2xl font-medium text-purple-700/80 mb-8"
+            className="text-base sm:text-lg md:text-xl lg:text-2xl font-medium text-purple-700/80 mb-6 sm:mb-8"
           >
             {slides[index].subtitle}
           </motion.h3>
@@ -95,7 +95,7 @@ export default function CommunityDrivenShowcase() {
           {/* Main Text */}
           <motion.p
             key={`text-${index}`}
-            className="max-w-3xl text-gray-600 text-lg sm:text-xl leading-relaxed font-light mb-12"
+            className="max-w-3xl text-gray-600 text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed font-light mb-10 sm:mb-12"
           >
             {slides[index].text}
           </motion.p>
@@ -104,22 +104,21 @@ export default function CommunityDrivenShowcase() {
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="px-8 py-3 rounded-full bg-purple-600 text-white font-medium shadow-md hover:shadow-lg transition-all"
+            className="px-6 sm:px-8 py-2.5 sm:py-3 rounded-full bg-purple-600 text-white text-sm sm:text-base font-medium shadow-md hover:shadow-lg transition-all"
           >
             Learn More →
           </motion.button>
 
           {/* Progress Indicators (Clickable) */}
-          <div className="absolute bottom-10 flex gap-3">
+          <div className="absolute bottom-8 sm:bottom-10 flex gap-2 sm:gap-3">
             {slides.map((_, i) => (
               <button
                 key={i}
                 onClick={() => handleSelectSlide(i)}
-                className={`h-[5px] rounded-full transition-all duration-500 ${
-                  i === index
-                    ? "bg-purple-600 w-12"
-                    : "bg-gray-300/70 hover:bg-purple-300 w-8"
-                }`}
+                className={`h-[4px] sm:h-[5px] rounded-full transition-all duration-500 ${i === index
+                    ? "bg-purple-600 w-10 sm:w-12"
+                    : "bg-gray-300/70 hover:bg-purple-300 w-6 sm:w-8"
+                  }`}
               />
             ))}
           </div>

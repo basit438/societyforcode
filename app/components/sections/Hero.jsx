@@ -59,9 +59,9 @@ function Hero() {
     const x = e.clientX - rect.left;
     const y = e.clientY - rect.top;
     const id = Date.now();
-    
+
     setSparkles(prev => [...prev, { id, x, y, linkIndex }]);
-    
+
     setTimeout(() => {
       setSparkles(prev => prev.filter(sparkle => sparkle.id !== id));
     }, 1000);
@@ -77,20 +77,20 @@ function Hero() {
 
   return (
     <div className="relative min-h-screen bg-gradient-to-br from-purple-50 via-white to-purple-50 overflow-hidden">
-      
+
       {/* Navbar */}
-     <Navbar/>
+      <Navbar />
 
       {/* Decorative Elements */}
       <div className="absolute top-20 right-0 w-[600px] h-[600px] bg-purple-200/30 rounded-full blur-3xl" />
       <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-purple-300/20 rounded-full blur-3xl" />
-      
+
       {/* Floating Shapes */}
       <div className="absolute top-40 left-10 w-20 h-20 border-4 border-purple-300/40 rounded-3xl rotate-12 animate-pulse" />
       <div className="absolute top-60 right-32 w-16 h-16 bg-purple-400/20 rounded-2xl -rotate-12" />
       <div className="absolute bottom-40 right-20 w-24 h-24 border-4 border-purple-200/50 rounded-full" />
       <div className="absolute bottom-32 left-1/4 w-12 h-12 bg-gradient-to-br from-purple-300/30 to-purple-500/30 rounded-xl rotate-45" />
-      
+
       {/* Dotted Pattern */}
       <div className="absolute inset-0 opacity-30" style={{
         backgroundImage: 'radial-gradient(circle, #a855f7 1px, transparent 1px)',
@@ -109,7 +109,7 @@ function Hero() {
         <div className="absolute inset-8 animate-spin" style={{ animationDuration: '25s' }}>
           <div className="absolute top-0 left-1/2 w-5 h-5 bg-purple-600 rounded-full -translate-x-1/2 shadow-lg shadow-purple-500/50" />
         </div>
-        
+
         {/* Floating Code Blocks */}
         <div className="absolute top-20 right-20 bg-white/80 backdrop-blur-sm p-4 rounded-2xl shadow-2xl shadow-purple-200/50 border border-purple-200 animate-float" style={{ animationDelay: '0s' }}>
           <div className="flex items-center gap-2 mb-2">
@@ -140,7 +140,7 @@ function Hero() {
         {/* Geometric Shapes with Pulse */}
         <div className="absolute top-40 right-40 w-24 h-24 border-4 border-purple-400 rounded-3xl rotate-45 animate-pulse-slow" />
         <div className="absolute bottom-40 right-16 w-20 h-20 bg-gradient-to-br from-purple-400/30 to-purple-600/30 rounded-2xl -rotate-12 animate-pulse-slow" style={{ animationDelay: '0.5s' }} />
-        
+
         {/* Central Glow Sphere */}
         <div className="absolute top-1/2 right-1/4 -translate-y-1/2">
           <div className="relative w-40 h-40">
@@ -167,17 +167,17 @@ function Hero() {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 container mx-auto px-6 lg:px-16 pt-40 pb-24">
+      <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-16 pt-32 sm:pt-40 pb-16 sm:pb-24">
         <div className="max-w-5xl">
-          
+
           {/* Floating Badge */}
-          <div className="inline-flex items-center gap-2 px-5 py-2.5 bg-white shadow-lg shadow-purple-200/50 border border-purple-200 rounded-full mb-8 animate-bounce">
+          <div className="inline-flex items-center gap-2 px-4 sm:px-5 py-2 sm:py-2.5 bg-white shadow-lg shadow-purple-200/50 border border-purple-200 rounded-full mb-6 sm:mb-8 animate-bounce">
             <Sparkles className="w-4 h-4 text-purple-600" />
-            <span className="text-sm text-gray-700 font-semibold">Where Creativity Meets Innovation</span>
+            <span className="text-xs sm:text-sm text-gray-700 font-semibold">Where Creativity Meets Innovation</span>
           </div>
 
           {/* Main Heading with Artistic Typography */}
-          <h1 className="text-6xl md:text-7xl lg:text-8xl font-black text-gray-900 mb-8 leading-[1.1]">
+          <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-black text-gray-900 mb-6 sm:mb-8 leading-[1.1]">
             Crafting
             <span className="block relative mt-2">
               <span className="relative inline-block">
@@ -191,52 +191,52 @@ function Hero() {
           </h1>
 
           {/* Subheading */}
-          <p className="text-xl md:text-2xl text-gray-600 mb-12 max-w-2xl leading-relaxed font-medium">
+          <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-600 mb-8 sm:mb-12 max-w-2xl leading-relaxed font-medium">
             A creative community and business agency delivering premium software development, AI-powered solutions, and stunning design that transforms brands.
           </p>
 
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-5 mb-20">
-            <button className="group px-9 py-4 bg-gradient-to-r from-purple-600 to-purple-700 text-white rounded-2xl font-bold text-lg flex items-center justify-center gap-3 hover:shadow-2xl hover:shadow-purple-400/50 transition-all duration-300 hover:scale-105 hover:-translate-y-1">
+          <div className="flex flex-col sm:flex-row gap-4 sm:gap-5 mb-12 sm:mb-20">
+            <button className="group px-6 sm:px-9 py-3 sm:py-4 bg-gradient-to-r from-purple-600 to-purple-700 text-white rounded-2xl font-bold text-base sm:text-lg flex items-center justify-center gap-3 hover:shadow-2xl hover:shadow-purple-400/50 transition-all duration-300 hover:scale-105 hover:-translate-y-1">
               Explore Our Work
               <ArrowRight className="w-5 h-5 group-hover:translate-x-2 transition-transform" />
             </button>
-            <button className="px-9 py-4 bg-white text-purple-700 rounded-2xl font-bold text-lg border-2 border-purple-300 hover:border-purple-500 hover:bg-purple-50 transition-all duration-300 shadow-lg shadow-purple-100">
+            <button className="px-6 sm:px-9 py-3 sm:py-4 bg-white text-purple-700 rounded-2xl font-bold text-base sm:text-lg border-2 border-purple-300 hover:border-purple-500 hover:bg-purple-50 transition-all duration-300 shadow-lg shadow-purple-100">
               Join Our Community
             </button>
           </div>
 
           {/* Artistic Stats Display */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 pt-12 border-t-2 border-purple-200">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 md:gap-8 pt-8 sm:pt-12 border-t-2 border-purple-200">
             <div className="relative group cursor-default">
               <div className="absolute -inset-2 bg-gradient-to-r from-purple-400 to-purple-600 rounded-2xl blur opacity-0 group-hover:opacity-30 transition-opacity" />
               <div className="relative">
-                <div className="text-5xl font-black bg-gradient-to-r from-purple-600 to-purple-800 bg-clip-text text-transparent mb-2">50+</div>
-                <div className="text-sm text-gray-600 font-semibold uppercase tracking-wider">Projects</div>
+                <div className="text-3xl sm:text-4xl md:text-5xl font-black bg-gradient-to-r from-purple-600 to-purple-800 bg-clip-text text-transparent mb-1 sm:mb-2">50+</div>
+                <div className="text-xs sm:text-sm text-gray-600 font-semibold uppercase tracking-wider">Projects</div>
               </div>
             </div>
-            
+
             <div className="relative group cursor-default">
               <div className="absolute -inset-2 bg-gradient-to-r from-purple-400 to-purple-600 rounded-2xl blur opacity-0 group-hover:opacity-30 transition-opacity" />
               <div className="relative">
-                <div className="text-5xl font-black bg-gradient-to-r from-purple-600 to-purple-800 bg-clip-text text-transparent mb-2">200+</div>
-                <div className="text-sm text-gray-600 font-semibold uppercase tracking-wider">Creatives</div>
+                <div className="text-3xl sm:text-4xl md:text-5xl font-black bg-gradient-to-r from-purple-600 to-purple-800 bg-clip-text text-transparent mb-1 sm:mb-2">200+</div>
+                <div className="text-xs sm:text-sm text-gray-600 font-semibold uppercase tracking-wider">Creatives</div>
               </div>
             </div>
-            
+
             <div className="relative group cursor-default">
               <div className="absolute -inset-2 bg-gradient-to-r from-purple-400 to-purple-600 rounded-2xl blur opacity-0 group-hover:opacity-30 transition-opacity" />
               <div className="relative">
-                <div className="text-5xl font-black bg-gradient-to-r from-purple-600 to-purple-800 bg-clip-text text-transparent mb-2">15+</div>
-                <div className="text-sm text-gray-600 font-semibold uppercase tracking-wider">Technologies</div>
+                <div className="text-3xl sm:text-4xl md:text-5xl font-black bg-gradient-to-r from-purple-600 to-purple-800 bg-clip-text text-transparent mb-1 sm:mb-2">15+</div>
+                <div className="text-xs sm:text-sm text-gray-600 font-semibold uppercase tracking-wider">Technologies</div>
               </div>
             </div>
-            
+
             <div className="relative group cursor-default">
               <div className="absolute -inset-2 bg-gradient-to-r from-purple-400 to-purple-600 rounded-2xl blur opacity-0 group-hover:opacity-30 transition-opacity" />
               <div className="relative">
-                <div className="text-5xl font-black bg-gradient-to-r from-purple-600 to-purple-800 bg-clip-text text-transparent mb-2">98%</div>
-                <div className="text-sm text-gray-600 font-semibold uppercase tracking-wider">Satisfaction</div>
+                <div className="text-3xl sm:text-4xl md:text-5xl font-black bg-gradient-to-r from-purple-600 to-purple-800 bg-clip-text text-transparent mb-1 sm:mb-2">98%</div>
+                <div className="text-xs sm:text-sm text-gray-600 font-semibold uppercase tracking-wider">Satisfaction</div>
               </div>
             </div>
           </div>

@@ -26,23 +26,23 @@ export default function Footer() {
 
       <div className="relative z-10 max-w-7xl mx-auto">
         {/* Top: Newsletter Section */}
-        <div className="bg-white/10 border border-purple-400/30 backdrop-blur-md rounded-3xl p-8 md:p-10 flex flex-col md:flex-row items-center justify-between gap-6 mb-16">
-          <div>
-            <h3 className="text-2xl md:text-3xl font-bold mb-2 flex items-center gap-2">
-              <Sparkles className="w-6 h-6 text-yellow-300" />
+        <div className="bg-white/10 border border-purple-400/30 backdrop-blur-md rounded-3xl p-6 sm:p-8 md:p-10 flex flex-col md:flex-row items-center justify-between gap-6 mb-12 md:mb-16">
+          <div className="text-center md:text-left">
+            <h3 className="text-xl sm:text-2xl md:text-3xl font-bold mb-2 flex items-center gap-2 justify-center md:justify-start">
+              <Sparkles className="w-5 h-5 sm:w-6 sm:h-6 text-yellow-300" />
               Stay in the Loop
             </h3>
-            <p className="text-purple-100/80">
+            <p className="text-sm sm:text-base text-purple-100/80">
               Subscribe to receive updates, insights, and upcoming event news.
             </p>
           </div>
-          <div className="flex w-full md:w-auto gap-3">
+          <div className="flex flex-col sm:flex-row w-full md:w-auto gap-3">
             <input
               type="email"
               placeholder="Your email address"
-              className="px-5 py-3 rounded-2xl bg-white/10 border border-purple-300/30 text-white placeholder-purple-200/70 focus:outline-none focus:border-purple-300 flex-grow"
+              className="px-4 sm:px-5 py-3 rounded-2xl bg-white/10 border border-purple-300/30 text-white placeholder-purple-200/70 focus:outline-none focus:border-purple-300 flex-grow min-w-0"
             />
-            <button className="px-6 py-3 bg-gradient-to-r from-purple-500 to-purple-700 rounded-2xl font-semibold hover:shadow-lg hover:shadow-purple-400/30 transition-all flex items-center gap-2">
+            <button className="px-5 sm:px-6 py-3 bg-gradient-to-r from-purple-500 to-purple-700 rounded-2xl font-semibold hover:shadow-lg hover:shadow-purple-400/30 transition-all flex items-center gap-2 justify-center whitespace-nowrap">
               Subscribe <ArrowRight className="w-4 h-4" />
             </button>
           </div>
@@ -55,40 +55,40 @@ export default function Footer() {
             <div className="text-3xl font-black bg-gradient-to-r from-purple-300 to-purple-500 bg-clip-text text-transparent mb-5">
               SFC
             </div>
-            <p className="text-purple-100/80 leading-relaxed mb-6 font-inter"> 
+            <p className="text-purple-100/80 leading-relaxed mb-6 font-inter">
               Where innovation meets education. Empowering engineers with the skills to
               build, design, and innovate for the digital world.
             </p>
-          <div className="flex gap-4">
-  {[
-    {
-      icon: Github,
-      link: "https://github.com/societyforcode",
-    },
-    {
-      icon: Linkedin,
-      link: "https://www.linkedin.com/company/society-for-code",
-    },
-    {
-      icon: Instagram,
-      link: "https://www.instagram.com/societyforcode",
-    },
-    {
-      icon: Twitter,
-      link: "https://twitter.com/societyforcode",
-    },
-  ].map(({ icon: Icon, link }, i) => (
-    <a
-      key={i}
-      href={link}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="p-3 rounded-xl bg-white/10 hover:bg-purple-500/20 transition-all border border-purple-300/30 hover:-translate-y-1"
-    >
-      <Icon className="w-5 h-5 text-purple-200" />
-    </a>
-  ))}
-</div>
+            <div className="flex gap-4">
+              {[
+                {
+                  icon: Github,
+                  link: "https://github.com/societyforcode",
+                },
+                {
+                  icon: Linkedin,
+                  link: "https://www.linkedin.com/company/society-for-code",
+                },
+                {
+                  icon: Instagram,
+                  link: "https://www.instagram.com/societyforcode",
+                },
+                {
+                  icon: Twitter,
+                  link: "https://twitter.com/societyforcode",
+                },
+              ].map(({ icon: Icon, link }, i) => (
+                <a
+                  key={i}
+                  href={link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-3 rounded-xl bg-white/10 hover:bg-purple-500/20 transition-all border border-purple-300/30 hover:-translate-y-1"
+                >
+                  <Icon className="w-5 h-5 text-purple-200" />
+                </a>
+              ))}
+            </div>
 
           </div>
 
@@ -132,18 +132,20 @@ export default function Footer() {
           <div>
             <h4 className="text-xl font-semibold text-purple-200 mb-5">Connect</h4>
             <ul className="space-y-4 text-purple-100/80">
-              <li className="flex gap-3 items-center">
-                <MapPin className="w-5 h-5 text-purple-400 font-inter" />
+              <li className="flex gap-3 items-start">
+                <MapPin className="w-5 h-5 text-purple-400 font-inter flex-shrink-0 mt-0.5" />
                 <span className="font-inter">Society for Code , Srinagar</span>
               </li>
-              <li className="flex gap-2 items-center font-inter">
-                <Phone className="w-5 h-5 text-purple-400" />
-                <span >+91 8082016593</span>
-                <span>+91 8492951234</span>
+              <li className="flex gap-2 items-start font-inter">
+                <Phone className="w-5 h-5 text-purple-400 flex-shrink-0 mt-0.5" />
+                <div className="flex flex-col gap-1">
+                  <span>+91 8082016593</span>
+                  <span>+91 8492951234</span>
+                </div>
               </li>
-              <li className="flex gap-3 items-center">
-                <Mail className="w-5 h-5 text-purple-400" />
-                <span>contact@societyforcode.com</span>
+              <li className="flex gap-3 items-start">
+                <Mail className="w-5 h-5 text-purple-400 flex-shrink-0 mt-0.5" />
+                <span className="break-all">contact@societyforcode.com</span>
               </li>
             </ul>
           </div>

@@ -52,7 +52,7 @@ export default function CollectiveSection() {
   }, []);
 
   return (
-    <section className="relative w-full bg-[#0a0a0f] text-white py-32 px-6 md:px-20 overflow-hidden">
+    <section className="relative w-full bg-[#0a0a0f] text-white py-16 sm:py-24 md:py-32 px-4 sm:px-6 md:px-20 overflow-hidden">
       {/* Background network canvas */}
       <canvas
         ref={canvasRef}
@@ -67,7 +67,7 @@ export default function CollectiveSection() {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="text-4xl md:text-6xl font-bold mb-8 leading-tight"
+          className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 sm:mb-8 leading-tight"
         >
           Enter the <span className="text-purple-400">Collective</span>
         </motion.h2>
@@ -76,9 +76,9 @@ export default function CollectiveSection() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed"
+          className="text-base sm:text-lg md:text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed px-4"
         >
-          SFC isn’t an agency — it’s a living network of creators, engineers,
+          SFC isn't an agency — it's a living network of creators, engineers,
           and visionaries. Together, we blend disciplines, ideas, and
           technologies to redefine how digital experiences are imagined and
           built.
@@ -88,7 +88,7 @@ export default function CollectiveSection() {
           initial={{ opacity: 0, scale: 0.9 }}
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.6, delay: 0.5 }}
-          className="flex justify-center gap-6 mt-16 flex-wrap"
+          className="flex justify-center gap-4 sm:gap-6 mt-12 sm:mt-16 flex-wrap"
         >
           {[
             "200+ Creators Worldwide",
@@ -98,7 +98,7 @@ export default function CollectiveSection() {
             <motion.div
               key={i}
               whileHover={{ scale: 1.05 }}
-              className="px-8 py-4 border border-white/10 rounded-2xl bg-white/5 backdrop-blur-sm text-gray-200 hover:text-white hover:border-purple-400 transition-all duration-300"
+              className="px-5 sm:px-8 py-3 sm:py-4 border border-white/10 rounded-2xl bg-white/5 backdrop-blur-sm text-sm sm:text-base text-gray-200 hover:text-white hover:border-purple-400 transition-all duration-300"
             >
               {item}
             </motion.div>
@@ -109,7 +109,7 @@ export default function CollectiveSection() {
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
           transition={{ duration: 0.2 }}
-          className="mt-16 px-10 py-4 bg-gradient-to-r from-purple-600 to-purple-400 rounded-full font-semibold text-white shadow-lg shadow-purple-600/30 hover:shadow-purple-600/50 transition-all"
+          className="mt-12 sm:mt-16 px-8 sm:px-10 py-3 sm:py-4 bg-gradient-to-r from-purple-600 to-purple-400 rounded-full font-semibold text-sm sm:text-base text-white shadow-lg shadow-purple-600/30 hover:shadow-purple-600/50 transition-all"
         >
           Join the Collective →
         </motion.button>

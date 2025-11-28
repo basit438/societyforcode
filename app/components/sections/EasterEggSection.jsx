@@ -37,7 +37,7 @@ export default function EasterEggSection() {
   return (
     <section
       ref={ref}
-      className="relative py-32 bg-gradient-to-br from-purple-50 via-white to-purple-100 overflow-hidden text-center"
+      className="relative py-16 sm:py-24 md:py-32 bg-gradient-to-br from-purple-50 via-white to-purple-100 overflow-hidden text-center"
     >
       {/* Decorative glowing background */}
       <div
@@ -49,35 +49,35 @@ export default function EasterEggSection() {
       />
 
       {/* Floating icons */}
-      <Sparkles className="absolute top-16 left-20 w-8 h-8 text-purple-400 animate-pulse-slow" />
-      <Wand2 className="absolute bottom-16 right-24 w-10 h-10 text-purple-500 animate-bounce" />
+      <Sparkles className="absolute top-12 sm:top-16 left-10 sm:left-20 w-6 h-6 sm:w-8 sm:h-8 text-purple-400 animate-pulse-slow" />
+      <Wand2 className="absolute bottom-12 sm:bottom-16 right-12 sm:right-24 w-8 h-8 sm:w-10 sm:h-10 text-purple-500 animate-bounce" />
 
       <motion.div
         initial={{ opacity: 0, y: 60 }}
         animate={controls}
-        className="relative z-10 max-w-3xl mx-auto px-6"
+        className="relative z-10 max-w-3xl mx-auto px-4 sm:px-6"
       >
         {/* Header badge */}
-        <div className="flex justify-center mb-6">
-          <div className="px-4 py-2 bg-purple-100 rounded-full text-sm font-semibold text-purple-700 shadow-md inline-flex items-center gap-2">
+        <div className="flex justify-center mb-5 sm:mb-6">
+          <div className="px-3 sm:px-4 py-2 bg-purple-100 rounded-full text-xs sm:text-sm font-semibold text-purple-700 shadow-md inline-flex items-center gap-2">
             <Code2 className="w-4 h-4" />
             <span>SFC Creative Lab 🧠</span>
           </div>
         </div>
 
-        <h2 className="text-4xl md:text-5xl font-black text-gray-900 mb-6">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-gray-900 mb-5 sm:mb-6">
           The Magic Behind Our Code
         </h2>
 
-        <p className="font-mono text-lg text-purple-800 min-h-[2rem]">
+        <p className="font-mono text-base sm:text-lg text-purple-800 min-h-[2rem]">
           {typedText}
           <span className="animate-pulse text-purple-600">|</span>
         </p>
 
-        <div className="mt-10">
+        <div className="mt-8 sm:mt-10">
           <button
             onClick={() => setShowLab(!showLab)}
-            className="px-6 py-3 bg-gradient-to-r from-purple-600 to-purple-700 text-white rounded-full font-semibold hover:shadow-lg hover:shadow-purple-300/50 transition-all"
+            className="px-5 sm:px-6 py-3 bg-gradient-to-r from-purple-600 to-purple-700 text-white rounded-full font-semibold text-sm sm:text-base hover:shadow-lg hover:shadow-purple-300/50 transition-all"
           >
             {showLab ? 'Close Lab 🧪' : 'Enter the Lab 🚀'}
           </button>
@@ -88,10 +88,10 @@ export default function EasterEggSection() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7 }}
-            className="mt-10 mx-auto w-full max-w-xl bg-gray-900 text-green-400 font-mono text-left rounded-2xl p-6 border border-purple-300/30 shadow-2xl"
+            className="mt-8 sm:mt-10 mx-auto w-full max-w-xl bg-gray-900 text-green-400 font-mono text-left rounded-2xl p-4 sm:p-6 border border-purple-300/30 shadow-2xl overflow-x-auto"
           >
-            <p className="text-gray-400 mb-2">// Welcome to SFC’s secret playground</p>
-            <pre>{`const team = ["Dreamers", "Builders", "Innovators"];
+            <p className="text-gray-400 mb-2 text-xs sm:text-sm">// Welcome to SFC's secret playground</p>
+            <pre className="text-xs sm:text-sm">{`const team = ["Dreamers", "Builders", "Innovators"];
 
 function createMagic() {
   return team.map(member => \`\${member} ✨\`);

@@ -67,20 +67,20 @@ export default function TestimonialSection() {
   const handleNext = () => setIndex((prev) => (prev + 1) % testimonials.length);
 
   return (
-    <section className="relative py-24 px-6 md:px-12 lg:px-24 overflow-hidden bg-white">
+    <section className="relative py-12 sm:py-16 md:py-24 px-4 sm:px-6 md:px-12 lg:px-24 overflow-hidden bg-white">
       {/* Subtle background accent */}
       <div className="absolute inset-0 -z-10 bg-gradient-to-br from-purple-50 via-white to-white" />
 
       <div className="max-w-6xl mx-auto text-center">
         {/* Header */}
-        <div className="mb-12">
-          <h2 className="text-4xl md:text-5xl font-semibold tracking-tight mb-4">
+        <div className="mb-10 sm:mb-12">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold tracking-tight mb-3 sm:mb-4">
             <span className="bg-gradient-to-r from-purple-600 via-fuchsia-500 to-purple-700 bg-clip-text text-transparent">
               What Our Clients Say
             </span>
           </h2>
-          <p className="text-gray-500 max-w-2xl mx-auto">
-            Real feedback from brands who’ve trusted us to transform their digital presence.
+          <p className="text-sm sm:text-base text-gray-500 max-w-2xl mx-auto px-4">
+            Real feedback from brands who've trusted us to transform their digital presence.
           </p>
         </div>
 
@@ -103,16 +103,16 @@ export default function TestimonialSection() {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -20 }}
                 transition={{ duration: 0.6, ease: "easeOut" }}
-                className="bg-white/80 backdrop-blur-lg shadow-xl rounded-2xl p-8 md:p-10 border border-purple-100"
+                className="bg-white/80 backdrop-blur-lg shadow-xl rounded-2xl p-6 sm:p-8 md:p-10 border border-purple-100"
               >
-                <p className="text-lg md:text-xl text-gray-800 italic leading-relaxed mb-6">
-                  “{testimonials[index].quote}”
+                <p className="text-base sm:text-lg md:text-xl text-gray-800 italic leading-relaxed mb-5 sm:mb-6">
+                  "{testimonials[index].quote}"
                 </p>
                 <div className="flex items-center justify-center gap-4">
 
                   <div className="text-left">
-                    <p className="font-semibold text-gray-900">{testimonials[index].author}</p>
-                    <p className="text-sm text-purple-600">{testimonials[index].title}</p>
+                    <p className="font-semibold text-sm sm:text-base text-gray-900">{testimonials[index].author}</p>
+                    <p className="text-xs sm:text-sm text-purple-600">{testimonials[index].title}</p>
                   </div>
                 </div>
               </motion.div>
@@ -121,25 +121,25 @@ export default function TestimonialSection() {
         </div>
 
         {/* Navigation arrows */}
-        <div className="flex justify-center mt-10 gap-6">
+        <div className="flex justify-center mt-8 sm:mt-10 gap-4 sm:gap-6">
           <button
             onClick={handlePrev}
-            className="w-10 h-10 rounded-full border border-purple-300 flex items-center justify-center hover:bg-purple-100 transition"
+            className="w-10 h-10 sm:w-12 sm:h-12 rounded-full border border-purple-300 flex items-center justify-center hover:bg-purple-100 transition"
             aria-label="Previous"
           >
-            <ChevronLeft className="text-purple-600 w-5 h-5" />
+            <ChevronLeft className="text-purple-600 w-5 h-5 sm:w-6 sm:h-6" />
           </button>
           <button
             onClick={handleNext}
-            className="w-10 h-10 rounded-full border border-purple-300 flex items-center justify-center hover:bg-purple-100 transition"
+            className="w-10 h-10 sm:w-12 sm:h-12 rounded-full border border-purple-300 flex items-center justify-center hover:bg-purple-100 transition"
             aria-label="Next"
           >
-            <ChevronRight className="text-purple-600 w-5 h-5" />
+            <ChevronRight className="text-purple-600 w-5 h-5 sm:w-6 sm:h-6" />
           </button>
         </div>
 
         {/* Dots indicator */}
-        <div className="flex justify-center mt-6 gap-2">
+        <div className="flex justify-center mt-5 sm:mt-6 gap-2">
           {testimonials.map((_, i) => (
             <div
               key={i}

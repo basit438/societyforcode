@@ -39,11 +39,11 @@ export default function Services() {
   ];
 
   return (
-    <section className="relative w-full bg-white py-28 overflow-hidden">
+    <section className="relative w-full bg-white py-16 sm:py-20 md:py-28 overflow-hidden">
       {/* Background gradient glow */}
       <div className="absolute top-1/2 left-1/2 w-[700px] h-[700px] bg-purple-100/30 blur-[120px] -translate-x-1/2 -translate-y-1/2 rounded-full -z-10" />
 
-      <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-20 grid lg:grid-cols-2 gap-20 items-center">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12 lg:px-20 grid lg:grid-cols-2 gap-12 sm:gap-16 md:gap-20 items-center">
         {/* Left side — intro */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -52,24 +52,24 @@ export default function Services() {
           viewport={{ once: true }}
           className="relative z-10"
         >
-          <h2 className="text-5xl md:text-6xl font-bold text-gray-900 leading-tight mb-6">
+          <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-gray-900 leading-tight mb-5 sm:mb-6">
             What We{" "}
             <span className="bg-gradient-to-r from-[#5E3FCB] to-[#7E65D6] bg-clip-text text-transparent">
               Create
             </span>
           </h2>
-          <p className="text-gray-600 text-lg leading-relaxed mb-10 max-w-md">
+          <p className="text-gray-600 text-base sm:text-lg leading-relaxed mb-8 sm:mb-10 max-w-md">
             From pixels to production, we transform ideas into living,
             interactive experiences — designed with precision and emotion.
           </p>
 
-          <button className="flex items-center gap-3 text-[#5E3FCB] font-semibold border-b-2 border-[#5E3FCB] pb-1 hover:gap-4 transition-all duration-300">
+          <button className="flex items-center gap-3 text-[#5E3FCB] font-semibold border-b-2 border-[#5E3FCB] pb-1 hover:gap-4 transition-all duration-300 text-sm sm:text-base">
             View All Services <ArrowRight className="w-4 h-4" />
           </button>
         </motion.div>
 
         {/* Right side — creative cards */}
-        <div className="relative flex flex-col gap-10">
+        <div className="relative flex flex-col gap-6 sm:gap-8 md:gap-10">
           {services.map((service, index) => {
             const Icon = service.icon;
             const isHovered = hovered === service.id;
@@ -82,34 +82,32 @@ export default function Services() {
                 viewport={{ once: true }}
                 onMouseEnter={() => setHovered(service.id)}
                 onMouseLeave={() => setHovered(null)}
-                className={`relative rounded-3xl overflow-hidden group transition-all duration-500 p-[2px] ${
-                  isHovered ? "scale-[1.02]" : "scale-100"
-                }`}
+                className={`relative rounded-3xl overflow-hidden group transition-all duration-500 p-[2px] ${isHovered ? "scale-[1.02]" : "scale-100"
+                  }`}
               >
                 {/* Gradient border effect */}
                 <div
-                  className={`absolute inset-0 bg-gradient-to-r ${service.color} opacity-70 blur-md transition-opacity duration-500 ${
-                    isHovered ? "opacity-100" : "opacity-50"
-                  }`}
+                  className={`absolute inset-0 bg-gradient-to-r ${service.color} opacity-70 blur-md transition-opacity duration-500 ${isHovered ? "opacity-100" : "opacity-50"
+                    }`}
                 ></div>
 
                 {/* Inner content */}
-                <div className="relative bg-white rounded-3xl p-10 z-10 shadow-[0_0_40px_rgba(0,0,0,0.05)]">
-                  <div className="flex items-center gap-5 mb-6">
+                <div className="relative bg-white rounded-3xl p-6 sm:p-8 md:p-10 z-10 shadow-[0_0_40px_rgba(0,0,0,0.05)]">
+                  <div className="flex items-center gap-4 sm:gap-5 mb-5 sm:mb-6">
                     <div
-                      className={`w-14 h-14 rounded-2xl bg-gradient-to-br ${service.color} flex items-center justify-center shadow-lg`}
+                      className={`w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-gradient-to-br ${service.color} flex items-center justify-center shadow-lg`}
                     >
-                      <Icon className="w-7 h-7 text-white" />
+                      <Icon className="w-6 h-6 sm:w-7 sm:h-7 text-white" />
                     </div>
-                    <h3 className="text-2xl font-semibold text-gray-900">
+                    <h3 className="text-xl sm:text-2xl font-semibold text-gray-900">
                       {service.title}
                     </h3>
                   </div>
-                  <p className="text-gray-600 leading-relaxed mb-4">
+                  <p className="text-sm sm:text-base text-gray-600 leading-relaxed mb-3 sm:mb-4">
                     {service.desc}
                   </p>
 
-                  <div className="text-[#5E3FCB] font-medium flex items-center gap-2">
+                  <div className="text-[#5E3FCB] font-medium flex items-center gap-2 text-sm sm:text-base">
                     Explore <ArrowRight className="w-4 h-4" />
                   </div>
                 </div>
