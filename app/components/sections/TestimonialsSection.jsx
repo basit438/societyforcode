@@ -7,24 +7,48 @@ import Image from "next/image";
 export default function TestimonialSection() {
   const testimonials = [
     {
-      quote: "Working with EnableNow was an absolute pleasure — their attention to detail and creativity elevated our brand identity beyond expectations.",
-      author: "Sarah Mitchell",
-      title: "Creative Director, Nova Agency",
+      quote: "My 8-year-old daughter now asks to do math homework. I'm not even joking. AceBraniac turned learning into something she actually looks forward to every evening.",
+      author: "AceBraniac",
+      title: "Parent & Software Engineer",
       image: "/profile1.jpg",
     },
     {
-      quote: "They didn’t just deliver a website, they crafted a digital experience. The UI and animations reflect our brand perfectly.",
-      author: "David Chen",
-      title: "Founder, Aural Studio",
+      quote: "We sold more embroidered shawls in two months on laCraf than we did in five years at local markets. Finally, a platform that actually understands artisans.",
+      author: "Sheikh Umaid",
+      title: "Master Weaver, Kashmir",
       image: "/profile2.jpg",
     },
     {
-      quote: "EnableNow understood our vision instantly and turned it into something tangible, elegant, and strategically powerful.",
-      author: "Priya Nair",
-      title: "Marketing Head, Lumos Design Co.",
+      quote: "The weather alerts on Ivulax saved my entire wheat crop last season. Got the frost warning at 4 AM and covered everything in time. This app pays for itself.",
+      author: "Aalim Aslam",
+      title: "Farmer, Punjab",
       image: "/profile3.jpg",
     },
-  ];
+    {
+      quote: "I failed chemistry twice before finding AceBraniac. The visual explanations just clicked. Now I'm helping my classmates study. It's wild how much difference the right teaching makes.",
+      author: "Zara Malik",
+      title: "High School Student",
+      image: "/profile4.jpg",
+    },
+    {
+      quote: "My grandmother's pottery reached customers in 12 countries through laCraf. She cried when she saw her work featured on the homepage. Some things are bigger than sales numbers.",
+      author: "Basarat Nazir",
+      title: "LaCraf Founder",
+      image: "/profile5.jpg",
+    },
+    {
+      quote: "Ivulax told me the market price was ₹28/kg when the middleman offered ₹18. I drove to the next town and got ₹27. Finally, farmers have real information, not just promises.",
+      author: "Ranjit Singh",
+      title: "Organic Farmer, Haryana",
+      image: "/profile6.jpg",
+    },
+    {
+      quote: "Algo Academy is the best app for learning math. The visual explanations just clicked. Now I'm helping my classmates study. It's wild how much difference the right teaching makes.",
+      author: "Irfan Yousuf",
+      title: "Algo Academy Founder",
+      image: "/profile6.jpg",
+    },
+  ]
 
   const [index, setIndex] = useState(0);
   const dragX = useMotionValue(0);
@@ -85,7 +109,7 @@ export default function TestimonialSection() {
                   “{testimonials[index].quote}”
                 </p>
                 <div className="flex items-center justify-center gap-4">
-                 
+
                   <div className="text-left">
                     <p className="font-semibold text-gray-900">{testimonials[index].author}</p>
                     <p className="text-sm text-purple-600">{testimonials[index].title}</p>
@@ -119,9 +143,8 @@ export default function TestimonialSection() {
           {testimonials.map((_, i) => (
             <div
               key={i}
-              className={`h-2 w-2 rounded-full transition-all duration-300 ${
-                i === index ? "bg-purple-600 w-4" : "bg-purple-200"
-              }`}
+              className={`h-2 w-2 rounded-full transition-all duration-300 ${i === index ? "bg-purple-600 w-4" : "bg-purple-200"
+                }`}
             />
           ))}
         </div>
