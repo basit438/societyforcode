@@ -191,8 +191,8 @@ function Hero() {
           </h1>
 
           {/* Subheading */}
-          <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-600 mb-8 sm:mb-12 max-w-2xl leading-relaxed font-medium">
-            A creative community and business agency delivering premium software development, AI-powered solutions, and stunning design that transforms brands.
+          <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-600 mb-8 sm:mb-12 max-w-2xl leading-relaxed font-inter">
+            Imagine your wildest digital idea. Now imagine it brought to life with precision, powered by smart tech, and looking absolutely stunning. That's the vibe we're all about at Society for Code.
           </p>
 
           {/* CTA Buttons */}
@@ -207,7 +207,7 @@ function Hero() {
           </div>
 
           {/* Artistic Stats Display */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 md:gap-8 pt-8 sm:pt-12 border-t-2 border-purple-200">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 md:gap-8 pt-8 sm:pt-12 border-t-2 font-inter border-purple-200">
             <div className="relative group cursor-default">
               <div className="absolute -inset-2 bg-gradient-to-r from-purple-400 to-purple-600 rounded-2xl blur opacity-0 group-hover:opacity-30 transition-opacity" />
               <div className="relative">

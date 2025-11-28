@@ -128,10 +128,8 @@ export default function About() {
             solutions that inspire and perform.
           </p>
           <p className="text-gray-600">
-            We believe in the power of collaboration—bringing together diverse
-            talents to solve complex challenges and deliver extraordinary value.
-            Together, we're shaping the future of technology and design, one
-            project at a time.
+            At Society for Code, we've built our foundation on the principle of 'Digital Excellence,' a commitment to merging creativity with innovation to deliver tangible results.
+
           </p>
         </div>
       ),
@@ -201,7 +199,7 @@ export default function About() {
         </motion.div>
 
         {/* Content + Stats */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10 md:gap-12 lg:gap-20 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10 md:gap-12 lg:gap-20 items-center font-inter">
           {/* Left Side (Animated Tab Content) */}
           <div className="relative overflow-hidden min-h-[300px] sm:min-h-[350px]">
             <AnimatePresence mode="wait">
