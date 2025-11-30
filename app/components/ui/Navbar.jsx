@@ -31,15 +31,14 @@ export default function Navbar() {
     { name: "About", href: "/about" },
     { name: "Services", href: "/services" },
     { name: "Blog", href: "/Blogs" },
-    
+    { name: "Careers", href: "/careers" },
     { name: "Contact", href: "/contact" },
   ];
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        isScrolled ? "bg-white/70 backdrop-blur-md shadow-md" : "bg-white/10 backdrop-blur-md"
-      }`}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${isScrolled ? "bg-white/70 backdrop-blur-md shadow-md" : "bg-white/10 backdrop-blur-md"
+        }`}
     >
       <div className="container mx-auto px-6 lg:px-16">
         <div className="flex items-center justify-between h-20">
@@ -80,9 +79,8 @@ export default function Navbar() {
                           key={i}
                           className="absolute w-1.5 h-1.5 bg-purple-500 rounded-full animate-ping"
                           style={{
-                            transform: `translate(-50%, -50%) rotate(${i * 60}deg) translateY(-${
-                              15 + Math.random() * 10
-                            }px)`,
+                            transform: `translate(-50%, -50%) rotate(${i * 60}deg) translateY(-${15 + Math.random() * 10
+                              }px)`,
                             animationDelay: `${i * 0.1}s`,
                             animationDuration: "1s",
                           }}
@@ -119,9 +117,8 @@ export default function Navbar() {
 
         {/* Mobile Menu */}
         <div
-          className={`md:hidden overflow-hidden transition-all duration-300 ${
-            isMobileMenuOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
-          }`}
+          className={`md:hidden overflow-hidden transition-all duration-300 ${isMobileMenuOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+            }`}
         >
           <div className="py-4 space-y-2">
             {navLinks.map((link, index) => (
