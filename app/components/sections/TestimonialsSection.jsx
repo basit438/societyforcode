@@ -21,7 +21,7 @@ export default function TestimonialSection() {
     {
       quote: "The weather alerts on Ivulax saved my entire wheat crop last season. Got the frost warning at 4 AM and covered everything in time. This app pays for itself.",
       author: "Aalim Aslam",
-      title: "Farmer, Punjab",
+      title: "Farmer, Rajasthan",
       image: "/profile3.jpg",
     },
     {
